@@ -7,7 +7,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 function Footer() {
   return (
-    <div className="font-[FFDINforPumaW07-Regular-latin] md:mt-20">
+    <div className="font-[FFDINforPumaW07-Regular-latin] mt-0">
       <div className="flex footer FootHead justify-between bg-[#181818] text-white gap-10 px-5 py-5">
         <div className="sm:m-0 md:block lg:m-5 Foothead">
           <h1 className="uppercase text-lg font-bold mb-3">Supports</h1>
