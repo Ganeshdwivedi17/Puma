@@ -4,13 +4,15 @@ import Images from "./Images";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useGetProductByIdQuery } from "../Redux/productApi";
+import Loading from "./loading";
+
 
 
 function ReviewProduct({params}) {
   let id = params.slug;
   const { isError, isLoading, isSuccess, data } = useGetProductByIdQuery(id);
     if (isLoading) {
-      return <h1>Loading...</h1>;
+      return <Loading/>
     }
   
   
