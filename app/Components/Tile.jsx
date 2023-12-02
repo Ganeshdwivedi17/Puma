@@ -4,7 +4,7 @@ function Tile({text, imgurl, url }) {
   return (
     <>
       <div className="mx-5 ">
-        <a href={url}>
+        
           <div
             className={`w-[130px] overflow-hidden object-cover h-[130px] bg-red-600 rounded-full`}
           >
@@ -16,7 +16,7 @@ function Tile({text, imgurl, url }) {
           <p className="text-sm font-bold text-center pt-2 leading-[10px]">
             {text}
           </p>
-        </a>
+       
       </div>
     </>
   );
