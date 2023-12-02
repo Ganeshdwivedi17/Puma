@@ -114,12 +114,18 @@ const handleLogOut = ()=>{
                     <li className='mb-4'>
                         <Link className={`link ${pathname === '/Contact' ? 'underline decoration-2 underline-offset-4 ' : ''} hover:underline decoration-2 underline-offset-4 decoration-orange-900 hover:text-black`} href='/Contact'>Contact</Link>
                     </li>
+                    {IsLogedIn ? 
+                    <><h1>Hello {User.email}</h1>
+                    <button onClick={handleLogOut} className='text-ltext-black  font-bold  px-4 py-2 border-solid border-2 '>Logout</button></>:
+                    <div>
                     <li className='mb-6'>
                         <Link className='text-lg font-bold  px-4 py-2 border-solid border-2 ' href={'/Account/Login'}>Login</Link>
                     </li>
                     <li className='mt-1'>
                         <Link className=' text-ltext-black  font-bold  px-4 py-2 border-solid border-2 ' href={'/Account/Register'}>Register</Link>
                     </li>
+                    </div>}
+
                 </ul>
             </div>
         </>
