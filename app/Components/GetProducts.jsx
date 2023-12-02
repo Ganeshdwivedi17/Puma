@@ -8,6 +8,9 @@ import { addtocart } from "../Redux/cartSlice";
 
 function GetProducts() {
   const [page, setpage] = useState(0);
+  useEffect(() => {
+
+ }, [page])
 
   const dispatch = useDispatch();
   const { isError, isLoading, isSuccess, data } = useGetAllProductsQuery(page);
@@ -19,18 +22,16 @@ function GetProducts() {
     dispatch(addtocart(product));
  }
 
-//  const nextPage = () => {
-//   setpage((prevpage) => (prevpage !== 90 ? page + 10 : prevpage));
-//   page == 90 ? console.log("you can't go next to anymore") : null;
-// };
-// const previosPage = () => {
-//   setpage((prevPage) => (prevPage > 0 ? prevPage - 10 : prevPage));
-//   page == 0 ? console.log("you can't go back anymore") : null;
-// };
+ const nextPage = () => {
+  setpage((prevpage) => (prevpage !== 90 ? page + 10 : prevpage));
+  page == 90 ? console.log("you can't go next to anymore") : null;
+};
+const previosPage = () => {
+  setpage((prevPage) => (prevPage > 0 ? prevPage - 10 : prevPage));
+  page == 0 ? console.log("you can't go back anymore") : null;
+};
 
-//  useEffect(() => {
-
-//  }, [page])
+ 
  
   
 
@@ -77,7 +78,7 @@ function GetProducts() {
             </div>
           }
         </div>
-        {/* <div className="flex justify-between">
+        <div className="flex justify-between">
           <button
             className="bg-black text-white font-bold px-4 py-2 my-2"
             onClick={previosPage}>
@@ -88,7 +89,7 @@ function GetProducts() {
             onClick={nextPage}>
             Next
           </button>
-        </div> */}
+        </div>
         
       </Suspense>
     </>
