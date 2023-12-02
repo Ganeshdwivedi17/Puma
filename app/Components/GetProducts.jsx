@@ -13,7 +13,7 @@ function GetProducts() {
   const { isError, isLoading, isSuccess, data } = useGetAllProductsQuery(page);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <Loading/>
   }
   const AddToCart = (product)=>{
     dispatch(addtocart(product));
