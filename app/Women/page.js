@@ -4,14 +4,14 @@ import Link from 'next/link';
 import { useGetProductByCategoryQuery } from "../Redux/productApi";
 import { useDispatch } from "react-redux";
 import { addtocart } from "../Redux/cartSlice";
+import Loading from './loading';
 
 function page() {
   const dispatch = useDispatch();
 const { isError, isLoading, isSuccess, data } = useGetProductByCategoryQuery("womens-bags");
-console.log(data);
 
 if (isLoading) {
-  return <h1>Loading...</h1>;
+  return <Loading/>
 } 
 
 const AddToCart = (data)=>{
